@@ -58,7 +58,16 @@ h1{color:#ff6b6b;margin-bottom:6px;font-size:22px;text-transform:uppercase;lette
 .winner-section h3{color:#ff9e6b;margin-bottom:8px;font-size:16px;}
 .no-winner{font-style:italic;color:#ff9e6b;}
 .footer-note{text-align:center;margin-top:15px;color:#ff9e6b;font-size:12px;padding:15px;}
-.modal, .confirmation-section {display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(30,30,46,0.95);padding:20px;border-radius:12px;border:2px solid #ff6b6b;z-index:1000;text-align:center;}
+.modal {display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(30,30,46,0.95);padding:15px;border-radius:12px;border:2px solid #ff6b6b;z-index:1000;text-align:center; max-width:90%; width:300px;}
+.modal-content img {max-height:60vh;}
+.confirmation-section {display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(30,30,46,0.95);padding:20px;border-radius:12px;border:2px solid #ff6b6b;z-index:1000;text-align:center; max-width:90%; width:350px;}
+.confirmation-message {margin-bottom:20px; font-weight:bold; color:#cdd6f4; font-size:16px; line-height:1.5; text-align:left;}
+.confirmation-buttons {display:flex;justify-content:center;gap:15px;}
+.btn {padding:12px 20px;border:none;border-radius:8px;font-weight:bold;cursor:pointer;transition:all 0.3s;font-size:16px;min-width:90px;}
+.btn-yes {background:linear-gradient(90deg,#4caf50,#66bb6a);color:#fff;box-shadow:0 0 15px rgba(76,175,80,0.4);}
+.btn-yes:hover {transform:scale(1.05);box-shadow:0 0 25px rgba(76,175,80,0.5);}
+.btn-no {background:linear-gradient(90deg,#c62828,#e53935);color:white;box-shadow:0 0 15px rgba(198,40,40,0.4);}
+.btn-no:hover {transform:scale(1.05);box-shadow:0 0 25px rgba(198,40,40,0.5);}
 .overlay {display: none; position: fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.7); z-index:999;}
 .reserved-name {font-size:9px;color:#ffcccc;text-align:center;max-width:90%;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
 </style>
@@ -95,7 +104,7 @@ h1{color:#ff6b6b;margin-bottom:6px;font-size:22px;text-transform:uppercase;lette
 
 <div class="confirmation-section" id="confirmationSection">
   <div class="confirmation-message" id="confirmationMessage"></div>
-  <div>
+  <div class="confirmation-buttons">
     <button class="btn btn-yes" id="btnYes">Sim</button>
     <button class="btn btn-no" id="btnNo">Não</button>
   </div>
