@@ -6,12 +6,14 @@
 <title>RIFA BRASIL - MRC</title>
 <script>
 const config = {
-  premiumValue: "Xiaomi Redmi 14C",
+  premiumValue: "1 Xiaomi Redmi 14C",   // Primeiro prêmio
+  secondPrize: "2 100 REAIS",                    // Segundo prêmio (ex: "100 Reais"), vazio = não aparece
+  thirdPrize: "3 100 REAIS",                     // Terceiro prêmio
   ticketValue: 20,
   winningNumber: null,
-  reservedGroups: "[1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [00]",
-  pixKey: "070.954.695-55 MARIA SÃO PEDRO DOS SANTOS DUNDA",
-  whatsappNumber: "5575997054600",
+  reservedGroups: "[1] [2] [.3dazinha] [4] [5] [6] [7] [8] [9] [.10neide] [11] [12] [.13dodo] [14] [.15evericio] [16] [.17marcelo] [18] [19] [20] [21] [.22cassio] [23] [.24vadique] [.25dazinha] [26] [.27rodrigo s q] [28] [29] [.30moacir] [.31nene] [.32neilza] [33] [.34vadique] [.35gael] [36] [37] [.38claudia] [39] [40] [.41evericio] [42] [43] [44] [45] [.46evericio] [47] [.48dora] [.49joao d g] [50] [51] [.52joao d g] [53] [.54rodrigo s q] [55] [.56conceiçao] [.57marcelo] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [.70gu] [71] [72] [73] [.74dora] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [.89dora] [90] [91] [92] [93] [.94edmilson] [95] [96] [97] [.98edmilson] [.99evericio] [00]",
+  pixKey: "75981816830 NILTON CESAR GABRIEL MACHADO",
+  whatsappNumber: "5575981816830",
   prizeImages: [
     "https://i.ibb.co/8gD4KvFz/Screenshot-2025-08-31-23-04-57-633-com-whatsapp-w4b.png",
     "https://i.ibb.co/2YmztL9K/Screenshot-2025-08-31-23-01-52-623-com-whatsapp-w4b.png",
@@ -44,7 +46,7 @@ h1{color:#ff6b6b;margin-bottom:6px;font-size:22px;text-transform:uppercase;lette
 .last-winner-btn {padding:8px 16px;background:linear-gradient(90deg, #ff6b6b, #ff9e6b);color:#fff;font-weight:600;border:none;border-radius:20px;cursor:pointer;transition:all 0.3s;font-size:13px;}
 .last-winner-btn:hover {transform:translateY(-2px);}
 .prize-info{background:rgba(30,30,46,0.8);padding:12px;border-radius:10px;margin-bottom:15px;text-align:center;border:1px dashed #ff6b6b;}
-.prize-info h2{color:#ff9e6b;margin-bottom:6px;font-size:18px;font-weight:700;}
+.prize-info h2{color:#ff6b6b;margin-bottom:6px;font-size:18px;font-weight:700;}
 .prize-info p{color:#ff6b6b;font-weight:600;font-size:14px;}
 .blocks-container{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:15px;}
 .block{background:rgba(30,30,46,0.8);border:1px solid #ff6b6b;border-radius:8px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:8px 3px;min-height:60px;cursor:pointer;}
@@ -55,7 +57,7 @@ h1{color:#ff6b6b;margin-bottom:6px;font-size:22px;text-transform:uppercase;lette
 .block.available .block-status {color: #a5d6a7;}
 .block.winner{background:rgba(123,31,162,0.8);color:#fff;border-color:#ce93d8;}
 .winner-section{background:rgba(30,30,46,0.8);padding:12px;border-radius:10px;margin-top:15px;text-align:center;border-left:4px solid #ff6b6b;}
-.winner-section h3{color:#ff9e6b;margin-bottom:8px;font-size:16px;}
+.winner-section h3{color:#ff6b6b;margin-bottom:8px;font-size:16px;}
 .no-winner{font-style:italic;color:#ff9e6b;}
 .footer-note{text-align:center;margin-top:15px;color:#ff9e6b;font-size:12px;padding:15px;}
 .modal {display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(30,30,46,0.95);padding:15px;border-radius:12px;border:2px solid #ff6b6b;z-index:1000;text-align:center; max-width:90%; width:300px;}
@@ -76,7 +78,7 @@ h1{color:#ff6b6b;margin-bottom:6px;font-size:22px;text-transform:uppercase;lette
 <div class="overlay" id="overlay"></div>
 <div class="container">
   <div class="header">
-    <h1>RIFA RESPONSÁVEL MARIA</h1>
+    <h1>RIFA DE NILTON CESAR</h1>
     <p>RESULTADO DO JOGO DO BICHO 19h - BA ASSIM QUE ENCHER</p>
   </div>
   <div class="prize-carousel-section">
@@ -92,7 +94,10 @@ h1{color:#ff6b6b;margin-bottom:6px;font-size:22px;text-transform:uppercase;lette
     </div>
   </div>
   <div class="prize-info">
-    <h2>Prêmio: <span id="premiumValue"></span></h2>
+    <h2>Prêmios:</h2>
+    <p id="prize1"></p>
+    <p id="prize2"></p>
+    <p id="prize3"></p>
     <p>Valor por cota: R$ <span id="ticketValue"></span>,00</p>
   </div>
   <div class="blocks-container" id="blocksContainer"></div>
@@ -122,8 +127,21 @@ h1{color:#ff6b6b;margin-bottom:6px;font-size:22px;text-transform:uppercase;lette
 
 <script>
 function init() {
-  document.getElementById("premiumValue").textContent = config.premiumValue;
   document.getElementById("ticketValue").textContent = config.ticketValue;
+
+  // Configurar prêmios dinâmicos
+  const prizeFields = ["prize1", "prize2", "prize3"];
+  const prizes = [config.premiumValue, config.secondPrize, config.thirdPrize];
+  prizeFields.forEach((fieldId, index) => {
+    const el = document.getElementById(fieldId);
+    if (prizes[index] && prizes[index].trim() !== "") {
+      el.textContent = prizes[index];
+      el.style.display = "block";
+    } else {
+      el.style.display = "none";
+    }
+  });
+
   generateBlocks();
   updateWinnerDisplay();
   setupPrizeCarousel();
@@ -145,17 +163,15 @@ function parseReservedGroups(reservedString) {
   const regex = /\[\.?([^\]]+)\]/g;
   let match;
   while ((match = regex.exec(reservedString)) !== null) {
-    const content = match[1];
-    const isReserved = match[0].includes('.');
-    if (isReserved) {
-      const numberMatch = content.match(/^\d+/);
-      let number = numberMatch ? parseInt(numberMatch[0]) : parseInt(content);
-      if (number === 0) number = 100;
-      if (!isNaN(number) && number >= 1 && number <= 100) {
-        const name = content.replace(/^\d+/, '').trim();
-        reservedData.push({number: number, name: name || "Reservado"});
-      }
-    }
+    const content = match[1].trim();
+    const isReserved = match[0].startsWith('[.'); // ponto indica reservado com nome
+    let numberMatch = content.match(/^\d+/);
+    if (!numberMatch) continue;
+    let number = parseInt(numberMatch[0]);
+    if (number === 0) number = 100;
+    if (number < 1 || number > 100) continue;
+    const name = isReserved ? content.replace(/^\d+/, '').trim() || "Reservado" : null;
+    reservedData.push({ number, name, isReserved });
   }
   return reservedData;
 }
@@ -164,18 +180,24 @@ function generateBlocks() {
   const container = document.getElementById("blocksContainer");
   container.innerHTML = "";
   const reservedData = parseReservedGroups(config.reservedGroups);
+
   for (let i = 1; i <= 100; i++) {
     const block = document.createElement("div");
     block.className = "block";
     block.dataset.block = i;
+    
     const reservedInfo = reservedData.find(item => item.number === i);
-    const isReserved = !!reservedInfo;
-    const statusElement = `<div class="block-status">${isReserved ? "ESCOLHIDO" : "DISPONÍVEL"}</div>`;
-    const nameElement = isReserved ? `<div class="reserved-name">${reservedInfo.name}</div>` : '';
+    const isReserved = reservedInfo && reservedInfo.isReserved;
+    
+    const statusText = isReserved ? "ESCOLHIDO" : "DISPONÍVEL";
+    const nameElement = isReserved && reservedInfo.name ? `<div class="reserved-name">${reservedInfo.name}</div>` : '';
     const displayNumber = i === 100 ? "00" : i;
-    block.innerHTML = `<div class="block-number">${displayNumber}</div>${statusElement}${nameElement}`;
-    if (isReserved) block.classList.add("reserved");
-    else {
+    
+    block.innerHTML = `<div class="block-number">${displayNumber}</div><div class="block-status">${statusText}</div>${nameElement}`;
+
+    if (isReserved) {
+      block.classList.add("reserved");
+    } else {
       block.classList.add("available");
       block.addEventListener("click", () => {
         selectedGroup = i;
@@ -183,10 +205,12 @@ function generateBlocks() {
         showConfirmation(i, generatedId);
       });
     }
+
     if (config.winningNumber !== null && config.winningNumber !== "" && i === config.winningNumber) {
       block.classList.add("winner");
       block.classList.remove("reserved");
     }
+
     container.appendChild(block);
   }
 }
@@ -203,7 +227,7 @@ function confirmSelection() {
   if (selectedGroup && generatedId) {
     const idText = `NUMERO-${selectedGroup}-${generatedId}`;
     navigator.clipboard.writeText(idText);
-    const message = encodeURIComponent(`OLÁ, GOSTARIA DE RESERVAR O NÚMERO ${selectedGroup}\nMEU ID DE CONFIRMAÇÃO É: ${idText}\n\nCHAVE PIX PARA PAGAMENTO:\n${config.pixKey}\n\nAGUARDANDO O COMPROVANTE 🙏 ACOMPANHE SITE AQUI: https://mariamrcrf.github.io/mariamrcrf/`);
+    const message = encodeURIComponent(`OLÁ, GOSTARIA DE RESERVAR O NÚMERO ${selectedGroup}\nMEU ID DE CONFIRMAÇÃO É: ${idText}\n\nCHAVE PIX PARA PAGAMENTO:\n${config.pixKey}\n\nAGUARDANDO O COMPROVANTE 🙏 ACOMPANHE SITE AQUI: https://rifadodia.github.io/Niltonrifa/`);
     window.open(`https://wa.me/${config.whatsappNumber}?text=${message}`, '_blank');
     document.getElementById("confirmationSection").style.display = "none";
     document.getElementById("overlay").style.display = "none";
